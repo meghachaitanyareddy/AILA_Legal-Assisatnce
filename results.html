@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h2>Results for: "{{ query }}"</h2>
+    <ul>
+        {% for fname, snippet, score in results %}
+        <li><strong>{{ fname }}</strong> (Score: {{ score }})<br>{{ snippet }}...</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Search Again</a>
+</body>
+</html>
